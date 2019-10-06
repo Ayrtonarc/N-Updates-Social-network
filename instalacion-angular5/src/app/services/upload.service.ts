@@ -4,6 +4,7 @@ import {GLOBAL} from './global';
 @Injectable()
 export class UploadService{
     public url: string;
+    
 
     constructor(){
         this.url = GLOBAL.url;

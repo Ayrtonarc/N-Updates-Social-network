@@ -42,7 +42,8 @@
             El correo es obligatorio
         </span>
     </p>
-    <div *ngIf="user.image">
+    <div *ngIf="user.image" class="img-responsive">
+            
         <img src="{{ url + 'get-image-user/' + user.image }}" />
     </div>
     <p>
