@@ -33,7 +33,7 @@
   margin-top: 9px;
   margin-right: 2px;
 }
-.navigation .avatar{
+.navigation .avatar img{
   height: 38px;
   width: 38px;
 }
@@ -48,3 +48,32 @@
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus{
   color: #2C3E50 !important;
 }
+
+.item-user .image-user{
+  width: 75px;
+  height: 75px;
+  border-radius: 100px;
+  overflow: hidden;
+  
+  margin-right: 15px;
+}
+
+.item-user .image-user img{
+width: 75px;
+}
+
+.item-user .user-name{
+  margin-top:10px;
+}
+.item-user .user-name .nickname{
+  color:gray;
+}
+
+.item-user .user-name .name-surname{
+  color:#444;
+  font-weight: bold;
+}
+.avatar-default{
+  width: 100% !important; 
+}
+
