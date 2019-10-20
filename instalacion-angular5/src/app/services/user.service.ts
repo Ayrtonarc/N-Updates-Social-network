@@ -56,7 +56,7 @@ export class UserService{
   
   
   
-  /*
+  
   getStats(){
     let stats = JSON.parse(localStorage.getItem('stats'));
 
@@ -80,7 +80,7 @@ export class UserService{
       return this._http.get(this.url+'counters'+userId, {headers: headers});
     }                                
   }
-*/
+
 updateUser(user: User):Observable<any>{
   let params = JSON.stringify(user);
   let headers = new HttpHeaders().set('Content-Type','application/json')
