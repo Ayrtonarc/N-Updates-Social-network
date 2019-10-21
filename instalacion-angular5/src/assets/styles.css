@@ -48,7 +48,7 @@
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus{
   color: #2C3E50 !important;
 }
-
+/*Gente*/
 .item-user .image-user{
   width: 75px;
   height: 75px;
@@ -77,3 +77,18 @@ width: 75px;
   width: 100% !important; 
 }
 
+/*Sidebar*/
+#user-card{
+  padding: 25px;
+  width: 32%;
+}
+#user-card .avatar{
+  width: 75px;
+  height: 75px;
+  border-radius: 100px;
+  overflow: hidden;
+  margin-right: 15px;
+}
+#user-card .avata img{
+  width: 100%;
+}
