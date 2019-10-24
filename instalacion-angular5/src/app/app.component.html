@@ -8,13 +8,13 @@
 
   <ul class="nav navbar-nav" *ngIf="identity">
         <li>
-          <a [routerLink]="['/home']" [routerLinkActive]="['active']">
+          <a href="#">
             Inicio
             </a>
           </li>
 
           <li>
-            <a href = "#">
+            <a [routerLink]="['/timeline']" [routerLinkActive]="['active']">
               Publicaciones
               </a>
             </li>

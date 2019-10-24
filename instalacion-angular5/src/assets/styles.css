@@ -97,3 +97,7 @@ width: 75px;
 #user-card .avatar img{
   width: 100%;
 }
+/*Timeline*/
+#publications{
+  min-height: 500px;
+}
