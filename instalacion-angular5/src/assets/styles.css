@@ -78,10 +78,15 @@ width: 75px;
 }
 
 /*Sidebar*/
-#user-card{
+#user-card, #new-publication{
   padding: 25px;
   width: 32%;
 }
+#new-publication{
+  padding: 18px;
+  padding-left: 8px;
+}
+
 #user-card .avatar{
   width: 75px;
   height: 75px;
@@ -89,6 +94,6 @@ width: 75px;
   overflow: hidden;
   margin-right: 15px;
 }
-#user-card .avata img{
+#user-card .avatar img{
   width: 100%;
 }
