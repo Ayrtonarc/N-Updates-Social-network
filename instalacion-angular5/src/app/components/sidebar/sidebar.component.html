@@ -55,8 +55,13 @@
 
 <!--formulario de publicaciones -->
 <div id="new-publication" class="col-lg-4 pull-left panel panel-default">
-
-    <form #newPubForm="ngForm" (ngSubmit)="onSubmit()" class="col-lg-10">
+    <div class="new alert-success" *ngIf="status == 'success'">
+        Publicacion enviada correctamente
+    </div>
+    <div class="new alert-danger" *ngIf="status == 'error'">
+        Publicacion no enviada
+    </div>
+    <form #newPubForm="ngForm" (ngSubmit)="onSubmit(newPubForm)" class="col-lg-10">
         <p>
             <label>Escribe lo que piensas </label>
             <label>
