@@ -7,7 +7,7 @@
         <div *ngFor="let user of users" class="item-user">
             <div class="panel panel-default">
                 <div class="panel-body">
-                <div class="user-name pull-left">
+                
                 <div class="image-user pull-left">
                     <a href="#">
                         <img src="{{ url + 'get-image-user/' + user.image }}" *ngIf="user.image" />
@@ -23,7 +23,7 @@
                     </p>
                     <p class="nickname">{{user.nick}}</p>
                 </div>
-            </div>
+            
                 <!--Seguir/Dejar de seguir-->
                 <div class="pull-right" *ngIf="user._id != identity._id">
                         <button class="btn btn-success" *ngIf="follows.indexOf(user._id) < 0"

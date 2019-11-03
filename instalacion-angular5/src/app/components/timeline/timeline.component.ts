@@ -32,6 +32,7 @@ export class TimelineComponent implements OnInit{
         this.token = this._userService.getToken();
         this.url = GLOBAL.url;
         this.status = 'error';
+        this.page = 1;
     }
 
     ngOnInit(){
