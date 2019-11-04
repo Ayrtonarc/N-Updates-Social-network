@@ -4,6 +4,8 @@ import { Publication } from '../../models/publication';
 import { GLOBAL } from '../../services/global';
 import { UserService } from '../../services/user.service';
 import {PublicationService} from '../../services/publication.service';
+//import { $ } from 'protractor';
+import * as $ from 'jquery';
 
 @Component({
     selector: 'timeline',
@@ -19,7 +21,9 @@ export class TimelineComponent implements OnInit{
     public page;
     public total;
     public pages;
+    public itemsPerPage;
     public publications: Publication[];
+    
 
     constructor(
         private _route: ActivatedRoute,
@@ -40,16 +44,26 @@ export class TimelineComponent implements OnInit{
         this.getPublications(this.page);
     }
 
-    getPublications(page){
+    getPublications(page, adding = false){
         this._publicationService.getPublications(this.token, page).subscribe(
             response =>{
                 if(response.publications){
                     this.total = response.total_items;
                     this.pages = response.pages;
-                    this.publications = response.publications;
+                    this.itemsPerPage = response.items_per_page;
+
+                    if(!adding){
+                        this.publications = response.publications;
+                    }else{
+                        var arrayA = this.publications;
+                        var arrayB = response.publications;
+                        this.publications = arrayA.concat(arrayB);
+
+                        $("html, body").animate({ scrollTop: $('body').prop("scrollHeight")}, 500);
+                    }
 
                     if(page > this.pages){
-                        this._router.navigate(['/home']);
+                        //this._router.navigate(['/home']);
                     }
                 }else{
                     this.status = 'error'
@@ -63,5 +77,14 @@ export class TimelineComponent implements OnInit{
                 }
             }
         );
+    }
+    public noMore = false;
+    viewMore(){
+        if(this.publications.length == this.total){
+            this.noMore = true;
+        }else{
+            this.page += 1;
+        }
+        this.getPublications(this.page, true);
     }
 }
