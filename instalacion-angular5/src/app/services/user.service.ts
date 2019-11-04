@@ -77,7 +77,7 @@ export class UserService{
     if(userId != null){
       return this._http.get(this.url+'counters/'+userId, {headers: headers});
     }else{
-      return this._http.get(this.url+'counters'+userId, {headers: headers});
+      return this._http.get(this.url+'counters', {headers: headers});
     }                                
   }
 
