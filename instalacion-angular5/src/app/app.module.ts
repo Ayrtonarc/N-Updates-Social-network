@@ -4,6 +4,7 @@ import {FormsModule} from '@angular/forms';
 //import {HttpModule} from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { routing, appRoutingProviders} from './app.routing';
+import { MomentModule } from 'angular2-moment';
 
 //Componentes
 import { AppComponent } from './app.component';
@@ -35,7 +36,8 @@ import { ProfileComponent } from './components/profile/profile.component';
     BrowserModule,
     FormsModule,
     routing,
-    HttpClientModule
+    HttpClientModule,
+    MomentModule
   ],
   providers: [
     appRoutingProviders
