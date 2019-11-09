@@ -61,7 +61,7 @@
     <div class="new alert-danger" *ngIf="status == 'error'">
         Publicacion no enviada
     </div>
-    <form #newPubForm="ngForm" (ngSubmit)="onSubmit(newPubForm)" class="col-lg-10">
+    <form #newPubForm="ngForm" (ngSubmit)="onSubmit(newPubForm); sendPublication($event);" class="col-lg-10">
         <p>
             <label>Escribe lo que piensas </label>
             <label>
