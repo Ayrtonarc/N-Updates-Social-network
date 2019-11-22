@@ -7,7 +7,10 @@
   padding-bottom: 15px;
   border-bottom: 1px solid #eee;
 }
-
+/*body{ background: rgb(22, 22, 22) !important;
+ 
+}
+*/
 .active{
 	background: #094764;
 }
@@ -24,7 +27,8 @@
 
 .navigation .navbar{
   border-radius: 0px !important;
-  background: #2C3E50 !important;
+  /*background: #2C3E50 !important;*/
+  background: linear-gradient(#2C3E50, black);
   border: none;
 }
 
@@ -219,4 +223,7 @@ width: 120px;
   border-radius: 400px;
   overflow: hidden;
   margin-right: 15px;
+}
+#data-profile .avatar img{
+  width: 100% 
 }

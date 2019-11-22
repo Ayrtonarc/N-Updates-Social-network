@@ -44,6 +44,7 @@ export class ProfileComponent implements OnInit {
             let id = params ['id'];
 
             this.getUser(id);
+            this.getCounters(id);
         });
     }
 
@@ -66,6 +67,7 @@ export class ProfileComponent implements OnInit {
     getCounters(id){
         this._userService.getCounters(id).subscribe(
             response => {
+                console.log(response);
                 this.stats = response;
             },
             error => {
