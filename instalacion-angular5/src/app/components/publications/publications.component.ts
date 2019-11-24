@@ -59,7 +59,7 @@ export class PublicationsComponent implements OnInit{
                         var arrayB = response.publications;
                         this.publications = arrayA.concat(arrayB);
 
-                        $("html, body").animate({ scrollTop: $('body').prop("scrollHeight")}, 500);
+                        $("html, body").animate({ scrollTop: $('html').prop("scrollHeight")}, 500);
                     }
 
                     if(page > this.pages){
@@ -80,10 +80,9 @@ export class PublicationsComponent implements OnInit{
     }
     public noMore = false;
     viewMore(){
-        if(this.publications.length == this.total){
+        this.page += 1;
+        if(this.page == this.pages){
             this.noMore = true;
-        }else{
-            this.page += 1;
         }
         this.getPublications(this.page, true);
     }
