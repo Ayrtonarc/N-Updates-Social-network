@@ -37,7 +37,7 @@ export class SidebarComponent implements OnInit{
     ngOnInit(){
         console.log("El componente sidebar. component se ha cargado");
     }
-    onSubmit(form){
+    onSubmit(form, $event){
         this._publicationService.addPublication(this.token, this.publication).subscribe(
             response => {
                 if(response.publication){
@@ -52,9 +52,14 @@ export class SidebarComponent implements OnInit{
                                             this.status = 'success';
                                             form.reset();
                                             this._router.navigate(['/timeline']);
+                                            this.sended.emit({send:'true'});
                                         });
-                }else{
+                                        
+                }
+                
+                else{
                     this.status = 'error';
+
                 }
             },
             error => {
