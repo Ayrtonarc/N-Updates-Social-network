@@ -6,6 +6,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { routing, appRoutingProviders} from './app.routing';
 import { MomentModule } from 'angular2-moment';
 
+//Modulo de mesajeria personalizado
+
+
+import { MessagesModule } from './components/messages/messages.module';
 //Componentes
 import { AppComponent } from './app.component';
 import { LoginComponent} from './components/login/login.component';
@@ -18,6 +22,7 @@ import { TimelineComponent } from './components/timeline/timeline.component';
 import { PublicationsComponent } from './components/publications/publications.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { FollowingComponent} from './components/following/following.component';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -38,7 +43,8 @@ import { FollowingComponent} from './components/following/following.component';
     FormsModule,
     routing,
     HttpClientModule,
-    MomentModule
+    MomentModule,
+    MessagesModule
   ],
   providers: [
     appRoutingProviders

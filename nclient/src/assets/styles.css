@@ -9,8 +9,8 @@
 }
 /*body{ background: rgb(22, 22, 22) !important;
  
-}
-*/
+}*/
+
 .active{
 	background: #094764;
 }
@@ -71,7 +71,8 @@
 .jumbotron{
 	padding:25px;
 	border-radius: 5px;
-	text-align: center;
+  text-align: center;
+  
 }
 
 .user-image-for-edit img{
@@ -204,7 +205,9 @@ width: 120px;
 
 /*Timeline*/
 #publications{
+  
   min-height: 500px;
+  
 }
 #publications .date{
   color: grey;
@@ -215,6 +218,7 @@ width: 120px;
 /*perfiles*/
 #data-profile{
   min-height: 500px;
+  
 }
 
 #data-profile .avatar{
