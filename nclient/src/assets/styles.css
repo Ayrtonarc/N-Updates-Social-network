@@ -124,6 +124,7 @@ width: 120px;
 }
 
 #user-card, #new-publication{
+  
   padding: 25px;
   width: 32%;
 }
@@ -131,6 +132,7 @@ width: 120px;
 #new-publication{
   padding: 18px;
   padding-left: 8px;
+  
 }
 
 #user-card .avatar{
