@@ -24,6 +24,10 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { FollowingComponent} from './components/following/following.component';
 import { from } from 'rxjs';
 
+//servicios
+import { UserService } from './services/user.service';
+import { UserGuard } from './services/user.guard';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +51,9 @@ import { from } from 'rxjs';
     MessagesModule
   ],
   providers: [
-    appRoutingProviders
+    appRoutingProviders,
+    UserService,
+    UserGuard
   ],
   bootstrap: [AppComponent]
 })

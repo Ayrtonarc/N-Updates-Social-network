@@ -8,7 +8,7 @@ export class HomeComponent implements OnInit{
   public title:string;
 
   constructor(){
-    this.title  = 'Bienvendido a Neeucom'
+    this.title  = 'Tendencias al momento'
   }
   ngOnInit(){
     console.log('home.component cargado');
